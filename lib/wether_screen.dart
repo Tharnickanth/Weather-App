@@ -28,6 +28,7 @@ class Wether_Screen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //Main Card
             SizedBox(
@@ -76,6 +77,13 @@ class Wether_Screen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
+            Text(
+              "Weather forecast",
+              style: TextStyle(fontSize: 24),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Placeholder(
               fallbackHeight: 150,
             ),
@@ -83,6 +91,13 @@ class Wether_Screen extends StatelessWidget {
               height: 20,
             ),
             //additional informatation
+            Text(
+              "Weather forecast",
+              style: TextStyle(fontSize: 24),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Placeholder(
               fallbackHeight: 150,
             )
