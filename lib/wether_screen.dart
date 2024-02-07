@@ -73,6 +73,7 @@ class Wether_Screen extends StatelessWidget {
                 ),
               ),
             ),
+
             //Weather forecast
             SizedBox(
               height: 20,
@@ -82,14 +83,174 @@ class Wether_Screen extends StatelessWidget {
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
-            Placeholder(
-              fallbackHeight: 150,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    width: 120,
+                    child: Card(
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              "09.00",
+                              style: const TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Icon(
+                              Icons.cloud,
+                              size: 36,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("307.2")
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 120,
+                    child: Card(
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              "09.00",
+                              style: const TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Icon(
+                              Icons.cloud,
+                              size: 36,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("307.2")
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 120,
+                    child: Card(
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              "09.00",
+                              style: const TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Icon(
+                              Icons.cloud,
+                              size: 36,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("307.2")
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 120,
+                    child: Card(
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              "09.00",
+                              style: const TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Icon(
+                              Icons.cloud,
+                              size: 36,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("307.2")
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 120,
+                    child: Card(
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              "09.00",
+                              style: const TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Icon(
+                              Icons.cloud,
+                              size: 36,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("307.2")
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 20,
             ),
+
             //additional informatation
             Text(
               "Weather forecast",
