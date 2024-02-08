@@ -89,161 +89,11 @@ class Wether_Screen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    width: 120,
-                    child: Card(
-                      elevation: 6,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              "09.00",
-                              style: const TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Icon(
-                              Icons.cloud,
-                              size: 36,
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text("307.2")
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 120,
-                    child: Card(
-                      elevation: 6,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              "09.00",
-                              style: const TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Icon(
-                              Icons.cloud,
-                              size: 36,
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text("307.2")
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 120,
-                    child: Card(
-                      elevation: 6,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              "09.00",
-                              style: const TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Icon(
-                              Icons.cloud,
-                              size: 36,
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text("307.2")
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 120,
-                    child: Card(
-                      elevation: 6,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              "09.00",
-                              style: const TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Icon(
-                              Icons.cloud,
-                              size: 36,
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text("307.2")
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 120,
-                    child: Card(
-                      elevation: 6,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              "09.00",
-                              style: const TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Icon(
-                              Icons.cloud,
-                              size: 36,
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text("307.2")
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                  WeatherForecastCard(),
+                  WeatherForecastCard(),
+                  WeatherForecastCard(),
+                  WeatherForecastCard(),
+                  WeatherForecastCard(),
                 ],
               ),
             ),
@@ -253,16 +103,99 @@ class Wether_Screen extends StatelessWidget {
 
             //additional informatation
             Text(
-              "Weather forecast",
+              "Additional Information",
               style: TextStyle(fontSize: 24),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Placeholder(
-              fallbackHeight: 150,
+
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  AdditionalInformationCard(),
+                  AdditionalInformationCard(),
+                  AdditionalInformationCard()
+                ],
+              ),
             )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class WeatherForecastCard extends StatelessWidget {
+  const WeatherForecastCard({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 120,
+      child: Card(
+        elevation: 6,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        child: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Text(
+                "09.00",
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Icon(
+                Icons.cloud,
+                size: 36,
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Text("307.2")
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class AdditionalInformationCard extends StatelessWidget {
+  const AdditionalInformationCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(
+      width: 120,
+      child: Card(
+        elevation: 0,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Icon(
+                Icons.air,
+                size: 32,
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Text(
+                "data",
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Text(
+                "95",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
         ),
       ),
     );
