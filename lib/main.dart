@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(useMaterial3: true),
-      home: const Wether_Screen(),
+      theme: ThemeData.light(useMaterial3: true),
+      home: const WetherScreen(),
     );
   }
 }
